@@ -1,0 +1,349 @@
+/* Dasher UI Typography & Global Overrides */
+
+/* Apply Public Sans font globally */
+body {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif !important;
+    font-size: 0.875rem;
+    font-weight: 500;
+    color: #1c252e;
+    background: #f9fafb;
+}
+
+/* Typography Refinements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Public Sans', sans-serif;
+    font-weight: 600;
+    color: #1c252e;
+}
+
+h5 {
+    font-size: 1.125rem;
+    font-weight: 600;
+}
+
+/* Card Refinements - Exact Dasher */
+.card-lg {
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: 0 8px 16px 0 rgba(145 158 171 / 0.16);
+    transition: box-shadow 0.3s ease;
+}
+
+.card-lg:hover {
+    box-shadow: 0 12px 24px -4px rgba(145 158 171 / 0.16);
+}
+
+.card-header {
+    background: transparent;
+    border-bottom: 1px solid #f4f6f8;
+    padding: 1.25rem 1.5rem;
+}
+
+.card-header.border-bottom-0 {
+    border-bottom: none;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+.card-footer {
+    background: transparent;
+    border-top: 1px solid #f4f6f8;
+    padding: 1rem 1.5rem;
+}
+
+/* Stat Cards Gradients - Perfect Match */
+.bg-gradient-success {
+    background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%) !important;
+}
+
+.bg-gradient-info {
+    background: linear-gradient(135deg, #ecfeff 0%, #cffafe 100%) !important;
+}
+
+.bg-gradient-warning {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%) !important;
+}
+
+.bg-gradient-primary {
+    background: linear-gradient(135deg, #f0fdfa 0%, #ccfbf1 100%) !important;
+}
+
+/* Badge Refinements */
+.badge {
+    padding: 0.375rem 0.75rem;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    border-radius: 0.375rem;
+}
+
+/* Button Refinements */
+.btn {
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.58rem 1rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: #0284c7;
+    border-color: #0284c7;
+    box-shadow: 0 1px 2px 0 rgba(0, 167, 111, 0.05);
+}
+
+.btn-primary:hover {
+    background: #007867;
+    border-color: #007867;
+    transform: translateY(-1px);
+    box-shadow: rgba(0, 167, 111, 0.24) 0px 8px 16px 0px;
+}
+
+.btn-outline-primary {
+    color: #0284c7;
+    border-color: #dfe3e8;
+}
+
+.btn-outline-primary:hover {
+    background: #f0fdf4;
+    border-color: #0284c7;
+    color: #0284c7;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.75rem;
+    font-size: 0.75rem;
+}
+
+/* Form Controls */
+.form-control,
+.form-select {
+    border: 1px solid #dfe3e8;
+    border-radius: 0.5rem;
+    padding: 0.58rem 0.75rem;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #0284c7;
+    box-shadow: 0 0 0 0.25rem rgba(0, 167, 111, 0.1);
+}
+
+.form-label {
+    font-weight: 600;
+    font-size: 0.875rem;
+    color: #454f5b;
+    margin-bottom: 0.5rem;
+}
+
+/* Table Refinements */
+.table {
+    color: #1c252e;
+}
+
+.table thead th {
+    background: #f9fafb;
+    border-bottom: 1px solid #f4f6f8;
+    color: #637381;
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 1.25rem;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid #f4f6f8;
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: #f9fafb;
+}
+
+.table tbody td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+    font-weight: 500;
+}
+
+/* Avatar Improvements */
+.avatar {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+
+.avatar-sm {
+    width: 32px;
+    height: 32px;
+    font-size: 0.75rem;
+}
+
+.avatar-md {
+    width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+}
+
+/* Alert Refinements */
+.alert {
+    border-radius: 0.75rem;
+    border: none;
+    font-weight: 500;
+}
+
+.alert-success {
+    background: #d1fae5;
+    color: #065e49;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background: transparent;
+    padding: 0;
+    margin-bottom: 1.5rem;
+}
+
+.breadcrumb-item+.breadcrumb-item::before {
+    content: "/";
+    color: #919eab;
+}
+
+.breadcrumb-item a {
+    color: #637381;
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    color: #0284c7;
+}
+
+.breadcrumb-item.active {
+    color: #1c252e;
+}
+
+/* Progress Bar */
+.progress {
+    background: #f4f6f8;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    border-radius: 8px;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    border: none;
+    box-shadow: 0 12px 24px -4px rgba(145 158 171 / 0.16);
+    border-radius: 0.75rem;
+    padding: 0.5rem;
+}
+
+.dropdown-item {
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.dropdown-item:hover {
+    background: #f9fafb;
+}
+
+/* Spacing Utilities - Dasher Style */
+.px-6 {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+.py-6 {
+    padding-top: 4rem !important;
+    padding-bottom: 4rem !important;
+}
+
+.mb-6 {
+    margin-bottom: 1.5rem !important;
+}
+
+.gap-6 {
+    gap: 1.5rem !important;
+}
+
+.gap-8 {
+    gap: 2rem !important;
+}
+
+/* Text Colors - Dasher Palette */
+.text-primary-emphasis {
+    color: #007867 !important;
+}
+
+.text-success-emphasis {
+    color: #118d57 !important;
+}
+
+.text-info-emphasis {
+    color: #006c9c !important;
+}
+
+.text-warning-emphasis {
+    color: #b76e00 !important;
+}
+
+.text-danger-emphasis {
+    color: #b71d18 !important;
+}
+
+.text-secondary {
+    color: #637381 !important;
+}
+
+/* Background Subtle */
+.bg-primary-subtle {
+    background: #c8fad6 !important;
+}
+
+.bg-success-subtle {
+    background: #d3fcd2 !important;
+}
+
+.bg-info-subtle {
+    background: #cafdf5 !important;
+}
+
+.bg-warning-subtle {
+    background: #fff5cc !important;
+}
+
+.bg-danger-subtle {
+    background: #ffe9d5 !important;
+}
+
+/* Border Dashed */
+.border-dashed {
+    border-style: dashed !important;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    body {
+        font-size: 0.8125rem;
+    }
+
+    h5 {
+        font-size: 1rem;
+    }
+}

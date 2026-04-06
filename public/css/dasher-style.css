@@ -1,0 +1,331 @@
+/*! Dasher UI Style for UKK Peminjaman Alat */
+
+/* Dasher Color System */
+:root {
+    /* Primary (Teal/Green) */
+    --ds-primary: #00a76f;
+    --ds-primary-light: #c8fad6;
+    --ds-primary-dark: #007867;
+
+    /* Grays */
+    --ds-gray-50: #fcfdfd;
+    --ds-gray-100: #f9fafb;
+    --ds-gray-200: #f4f6f8;
+    --ds-gray-300: #dfe3e8;
+    --ds-gray-400: #c4cdd5;
+    --ds-gray-500: #919eab;
+    --ds-gray-600: #637381;
+    --ds-gray-700: #454f5b;
+    --ds-gray-800: #1c252e;
+    --ds-gray-900: #141a21;
+
+    /* Semantic Colors */
+    --ds-success: #22c55e;
+    --ds-danger: #ff5630;
+    --ds-warning: #ffab00;
+    --ds-info: #00b8d9;
+
+    /* Shadows */
+    --ds-shadow: 0 8px 16px 0 rgba(145 158 171 / 0.16);
+    --ds-shadow-sm: 0px 3px 1px -2px rgba(145 158 171 / 0.2);
+    --ds-shadow-lg: 0 12px 24px -4px rgba(145 158 171 / 0.16);
+}
+
+/* Global Styles */
+body {
+    font-family: 'Public Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 0.875rem;
+    background-color: var(--ds-gray-100);
+    color: var(--ds-gray-800);
+}
+
+/* Stat Cards - Dasher Style */
+.card-stat {
+    background: white;
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: var(--ds-shadow);
+    transition: all 0.3s ease;
+    overflow: hidden;
+}
+
+.card-stat:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--ds-shadow-lg);
+}
+
+.card-stat .card-body {
+    padding: 1.5rem;
+}
+
+.card-stat .stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+.card-stat .stat-value {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--ds-gray-900);
+}
+
+.card-stat .stat-label {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--ds-gray-600);
+}
+
+.card-stat .stat-trend {
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+/* Stat Card Variants */
+.card-stat.bg-primary-subtle {
+    background: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+}
+
+.card-stat.bg-primary-subtle .stat-icon {
+    background: var(--ds-primary);
+    color: white;
+}
+
+.card-stat.bg-success-subtle {
+    background: linear-gradient(135deg, #ecfdf5 0%, #d1fae5 100%);
+}
+
+.card-stat.bg-success-subtle .stat-icon {
+    background: var(--ds-success);
+    color: white;
+}
+
+.card-stat.bg-warning-subtle {
+    background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+}
+
+.card-stat.bg-warning-subtle .stat-icon {
+    background: var(--ds-warning);
+    color: white;
+}
+
+.card-stat.bg-info-subtle {
+    background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+}
+
+.card-stat.bg-info-subtle .stat-icon {
+    background: var(--ds-info);
+    color: white;
+}
+
+/* Cards */
+.card {
+    border-radius: 0.75rem;
+    border: none;
+    box-shadow: var(--ds-shadow);
+}
+
+.card-header {
+    background: white;
+    border-bottom: 1px solid var(--ds-gray-200);
+    padding: 1.25rem 1.5rem;
+    font-weight: 600;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Tables - Dasher Style */
+.table {
+    color: var(--ds-gray-800);
+}
+
+.table thead th {
+    background: var(--ds-gray-50);
+    border-bottom: 1px solid var(--ds-gray-300);
+    color: var(--ds-gray-700);
+    font-weight: 600;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    padding: 1rem 1.25rem;
+}
+
+.table tbody tr {
+    border-bottom: 1px solid var(--ds-gray-200);
+    transition: background 0.2s ease;
+}
+
+.table tbody tr:hover {
+    background: var(--ds-gray-50);
+}
+
+.table tbody td {
+    padding: 1rem 1.25rem;
+    vertical-align: middle;
+}
+
+/* Badges - Dasher Style */
+.badge {
+    padding: 0.375rem 0.75rem;
+    font-weight: 600;
+    font-size: 0.6875rem;
+    border-radius: 0.5rem;
+}
+
+.bg-pending {
+    background-color: #fff5cc !important;
+    color: #b76e00 !important;
+}
+
+.bg-approved {
+    background-color: #d3fcd2 !important;
+    color: #118d57 !important;
+}
+
+.bg-rejected {
+    background-color: #ffe9d5 !important;
+    color: #b71d18 !important;
+}
+
+.bg-returned {
+    background-color: #cafdf5 !important;
+    color: #006c9c !important;
+}
+
+/* Buttons - Dasher Style */
+.btn {
+    font-weight: 700;
+    font-size: 0.875rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    transition: all 0.2s ease;
+}
+
+.btn-primary {
+    background: var(--ds-primary);
+    border-color: var(--ds-primary);
+}
+
+.btn-primary:hover {
+    background: var(--ds-primary-dark);
+    border-color: var(--ds-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: rgba(0, 167, 111, 0.24) 0px 8px 16px 0px;
+}
+
+.btn-sm {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.75rem;
+}
+
+/* Sidebar - Dasher Style */
+.sidebar-dasher {
+    background: var(--ds-gray-900);
+    width: 260px;
+    min-height: 100vh;
+    box-shadow: var(--ds-shadow);
+}
+
+.sidebar-dasher .nav-link {
+    color: var(--ds-gray-400);
+    padding: 0.75rem 1.25rem;
+    border-radius: 0.5rem;
+    margin: 0.25rem 1rem;
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.sidebar-dasher .nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: white;
+}
+
+.sidebar-dasher .nav-link.active {
+    background: var(--ds-primary);
+    color: white;
+}
+
+.sidebar-dasher .nav-link i {
+    width: 20px;
+    text-align: center;
+    margin-right: 0.75rem;
+}
+
+/* Navbar - Dasher Style */
+.navbar-dasher {
+    background: white;
+    border-bottom: 1px solid var(--ds-gray-200);
+    box-shadow: var(--ds-shadow-sm);
+    padding: 1rem 1.5rem;
+}
+
+/* Forms - Dasher Style */
+.form-label {
+    font-weight: 600;
+    color: var(--ds-gray-800);
+    margin-bottom: 0.5rem;
+}
+
+.form-control,
+.form-select {
+    border: 1px solid var(--ds-gray-300);
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    font-size: 0.875rem;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: var(--ds-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 167, 111, 0.1);
+}
+
+/* Utilities */
+.text-primary-dasher {
+    color: var(--ds-primary) !important;
+}
+
+.text-success-dasher {
+    color: var(--ds-success) !important;
+}
+
+.text-warning-dasher {
+    color: var(--ds-warning) !important;
+}
+
+.text-danger-dasher {
+    color: var(--ds-danger) !important;
+}
+
+.fw-semibold {
+    font-weight: 600 !important;
+}
+
+.gap-6 {
+    gap: 1.5rem !important;
+}
+
+.gap-8 {
+    gap: 2rem !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar-dasher {
+        position: fixed;
+        left: -260px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar-dasher.active {
+        left: 0;
+    }
+}

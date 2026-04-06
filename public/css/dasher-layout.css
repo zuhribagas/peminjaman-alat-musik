@@ -1,0 +1,192 @@
+/* Additional Dasher Layout Fixes */
+
+/* Main App Layout */
+#app-content {
+    display: flex;
+    min-height: 100vh;
+}
+
+#page-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    /* prevent flex overflow */
+}
+
+/* Sidebar Dark Theme - Premium Version */
+.sidebar {
+    width: 260px;
+    background: linear-gradient(180deg, #1e1e2d 0%, #1a1a24 100%);
+    box-shadow: 4px 0 24px 0 rgba(0, 0, 0, 0.12);
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Scrollbar Styling */
+.sidebar::-webkit-scrollbar {
+    width: 6px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.sidebar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar .brand-logo {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding: 1.5rem 1.5rem;
+    background: rgba(0, 167, 111, 0.05);
+}
+
+.sidebar .brand-logo a {
+    transition: all 0.3s ease;
+}
+
+.sidebar .brand-logo a:hover {
+    transform: translateX(4px);
+}
+
+.sidebar .brand-logo i {
+    font-size: 2rem;
+    filter: drop-shadow(0 2px 4px rgba(0, 167, 111, 0.3));
+}
+
+.sidebar .site-logo-text {
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+/* Sidebar Navigation - Enhanced */
+.sidebar .navbar-nav {
+    padding: 0.5rem 0;
+}
+
+.sidebar .nav-link {
+    color: #a0a0b0;
+    padding: 0.875rem 1.25rem;
+    display: flex;
+    align-items: center;
+    gap: 0.875rem;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    border-left: 3px solid transparent;
+    font-weight: 500;
+    font-size: 0.9375rem;
+    position: relative;
+    margin: 0.125rem 0.75rem;
+    border-radius: 0.5rem;
+}
+
+.sidebar .nav-link::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: linear-gradient(180deg, #00a76f 0%, #00d68f 100%);
+    border-radius: 0 3px 3px 0;
+    transform: scaleY(0);
+    transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.sidebar .nav-link:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #fff;
+    transform: translateX(4px);
+    border-left-color: transparent;
+}
+
+.sidebar .nav-link:hover .nav-icon {
+    transform: scale(1.1);
+    color: #00a76f;
+}
+
+.sidebar .nav-link.active {
+    background: linear-gradient(90deg, rgba(0, 167, 111, 0.15) 0%, rgba(0, 167, 111, 0.05) 100%);
+    color: #00a76f;
+    border-left-color: transparent;
+    font-weight: 600;
+}
+
+.sidebar .nav-link.active::before {
+    transform: scaleY(1);
+}
+
+.sidebar .nav-link.active .nav-icon {
+    color: #00a76f;
+    filter: drop-shadow(0 2px 4px rgba(0, 167, 111, 0.4));
+}
+
+.sidebar .nav-icon {
+    font-size: 1.25rem;
+    width: 24px;
+    text-align: center;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sidebar .nav-heading {
+    color: #7a7a8a;
+    font-size: 0.6875rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    padding: 1.75rem 1.5rem 0.75rem;
+    margin-top: 0.5rem;
+}
+
+.sidebar .nav-line {
+    border-color: rgba(255, 255, 255, 0.08);
+    margin: 0.5rem 1.5rem 0.25rem;
+}
+
+/* Navbar Glass Effect - Exact Dasher */
+.navbar-glass {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+/* Main Content Area */
+main {
+    flex: 1;
+    background: #f9fafb;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .sidebar {
+        position: fixed;
+        left: -260px;
+        z-index: 1000;
+        transition: left 0.3s ease;
+    }
+
+    .sidebar.show {
+        left: 0;
+    }
+
+    #page-content {
+        width: 100%;
+    }
+}
